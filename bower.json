@@ -1,0 +1,23 @@
+{
+  "name": "fe-xiyaxi",
+  "description": "fe-xiyaxi",
+  "main": "index.js",
+  "authors": [
+    "niki <niki@90zl.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/plugins",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "dmui": "*",
+    "animate.css": "^3.5.2"
+  }
+}

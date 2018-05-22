@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('./templates/common_head_files.html', { "title": "首页" })
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="map-wrap"></div>
+    </div>
+    @@include('./templates/common_scripts_files.html')
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=eDPGwLGG3BUFKxw0idRGsl3ivRMbVtOn"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+</body>
+
+</html>
