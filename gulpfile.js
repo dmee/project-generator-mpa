@@ -74,9 +74,10 @@ gulp.task("script-fn-dev", () => {
 // script-开发模式打包
 gulp.task("script-dev", ["script-bundle", "script-common-dev", "script-fn-dev"]);
 
+
 // pages-打包
 gulp.task('pages', () => {
-    gulp.src(["src/*.html", "src/pages/**/*.html"])
+    gulp.src(["src/**/*.html", "!src/templates/**/*.html"])
         .pipe($.plumber())
         .pipe($.fileInclude({
             prefix: '@@',
@@ -99,7 +100,6 @@ gulp.task("clean", () => {
 // 监听任务
 gulp.task("watch", done => {
     $.livereload.listen();
-    gulp.watch(["src/framework/**/*"], ["framework"]); // 框架监听
     gulp.watch(["src/plugins/**/*"], ["script-bundle", "less-common"]); // 插件监听
     gulp.watch(["src/styles/**/*"], ["less-dev"]); // 样式监听
     gulp.watch(["src/scripts/**/*"], ["script-dev"]); // 样式监听
